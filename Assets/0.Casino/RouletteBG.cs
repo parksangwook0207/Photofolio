@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class RouletteBG : MonoBehaviour
 {
-    float startSpeed = 100;
-    float delaySpeed = 0.1f;
+    float startSpeed = 50;
+    float delaySpeed = 0.01f;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("RotateRoullet", 1f, 0.001f);
+        //InvokeRepeating("RotateRoullet", 1f, 0.001f);
     }
 
     void RotateRoullet()
@@ -22,15 +22,15 @@ public class RouletteBG : MonoBehaviour
         else
         {
             startSpeed = 0;
+            CancelInvoke("RotateRoullet");
         }
-
 
         transform.Rotate(Vector3.back * Time.deltaTime * startSpeed);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnStart()
     {
-        
+        startSpeed = 50;
+        InvokeRepeating("RotateRoullet", 1f, 0.001f);
     }
 }
