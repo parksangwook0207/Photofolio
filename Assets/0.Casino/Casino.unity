@@ -2330,7 +2330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b59fa02c59a5c54294dc719aa1943f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 0}
+  parent: {fileID: 1947696675}
 --- !u!4 &985200573
 Transform:
   m_ObjectHideFlags: 0
