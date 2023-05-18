@@ -17,6 +17,7 @@ public class BGMove : MonoBehaviour
         // 배경이동
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
 
+        // 배경이 설정된 범위를 벗어나면 위치 재설정
         if (transform.position.x <= -bgDis)
         {
             transform.position = temMove.position - moveDirection * bgDis;
