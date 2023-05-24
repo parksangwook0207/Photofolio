@@ -19,10 +19,15 @@ public class EnemySpawn : MonoBehaviour
         // spawnCnt를 시간마다 중첩
         spawnCnt += Time.deltaTime;
 
+        // spawnCnt가 nextspawnCnt 보다 클 시
         if (spawnCnt > nextspawnCnt)
         {
+            // spawnCnt를 0으로 세팅후
             spawnCnt = 0f;
+
+            // nextspawnCnt 를 랜덤값으로 2초에서 5초마다 랜덤 세팅후
             nextspawnCnt = Random.Range(2, 5);
+            // enemy를 생성
             Instantiate(enemy[Random.Range(0, enemy.Count)], parent);
         }
     }

@@ -30,11 +30,14 @@ public class BackGround : MonoBehaviour
         spawnX = Screen.width;
 
         // anchoredPosition = 앵커가 없는 포지션값
-        // rectTrans.anchoredPosition 의 백터값을 0, 150으로 설정
+        // rectTrans.anchoredPosition 의 백터값을 0, 150으로 세팅
         rectTrans.anchoredPosition = new Vector2(spawnX, startY);
-        
+
         // 스케일 변경
+
+        // scale 을 scaleSX ~ scaleEX 사이의 값중 랜덤으로
         float scale = Random.Range(scaleSX, scaleEX);
+        // rectTrans의 localScale 을 scale scale 으로 변경한다.
         rectTrans.localScale = new Vector2(scale, scale);
     }
 
