@@ -447,9 +447,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgObjs:
-  - {fileID: 3957942506620208071, guid: 0ebb4ebb620f31143baa9c6ff740ae58, type: 3}
-  - {fileID: 548554728, guid: 974716d8283c38b42a13dcc6347e9b6a, type: 3}
   - {fileID: 1116510976901097341, guid: d82aa7c2a9b0a484580888baeb7ee0ea, type: 3}
+  - {fileID: 548554728, guid: 974716d8283c38b42a13dcc6347e9b6a, type: 3}
+  - {fileID: 3957942506620208071, guid: 0ebb4ebb620f31143baa9c6ff740ae58, type: 3}
   parent: {fileID: 1774132657}
 --- !u!1 &888985437
 GameObject:
@@ -855,7 +855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy:
-  - {fileID: 6467281238764599409, guid: 09ee2c0d97fa791498c4d2a55c23240f, type: 3}
+  - {fileID: 5915844037446993252, guid: d81c5b9718147e74cb417d0d021f6939, type: 3}
   parent: {fileID: 1981513261}
 --- !u!1 &1543239938
 GameObject:
