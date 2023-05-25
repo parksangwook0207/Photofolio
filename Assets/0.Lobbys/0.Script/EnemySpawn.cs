@@ -7,11 +7,14 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] List<GameObject> enemy = new List<GameObject>();
     [SerializeField] private Transform parent;
 
+    
     // spawnCnt 를 0으로 세팅
     float spawnCnt = 0f;
 
     // nextspawnCnt를 0으로 세팅
     float nextspawnCnt = 0f;
+
+    
 
     // Update is called once per frame
     void Update()

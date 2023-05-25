@@ -95,4 +95,4 @@ MonoBehaviour:
   removeX: -300
   scaleSX: 0.5
   scaleEX: 1
-  isRemove: 1
+  isRemove: 0

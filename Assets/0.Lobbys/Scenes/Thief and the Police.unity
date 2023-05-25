@@ -821,7 +821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1539656785
 RectTransform:
   m_ObjectHideFlags: 0
@@ -855,7 +855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy:
-  - {fileID: 5915844037446993252, guid: d81c5b9718147e74cb417d0d021f6939, type: 3}
+  - {fileID: 4829789035737289437, guid: d81c5b9718147e74cb417d0d021f6939, type: 3}
   parent: {fileID: 1981513261}
 --- !u!1 &1543239938
 GameObject:

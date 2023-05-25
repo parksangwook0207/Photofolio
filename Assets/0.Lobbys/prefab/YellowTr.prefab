@@ -90,6 +90,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startY: 150
+  endY: 150
   speed: 80
   removeX: -300
-  isRemove: 1
+  scaleSX: 1
+  scaleEX: 1
+  isRemove: 0

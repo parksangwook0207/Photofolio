@@ -11,7 +11,7 @@ public class BGObjectSpwan : MonoBehaviour
 
     // nextSpwanTime 0으로 세팅
     float nextSpwanTime = 0f;
-
+    
     // Update is called once per frame
     void Update()
     {
