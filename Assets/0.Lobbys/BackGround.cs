@@ -26,15 +26,19 @@ public class BackGround : MonoBehaviour
         //  rectTrans 는 RectTransform 를 가져온다.
         rectTrans = GetComponent<RectTransform>();
 
-        // 스크린의 값을 0으로 세팅
         spawnX = Screen.width;
 
         // anchoredPosition = 앵커가 없는 포지션값
         // rectTrans.anchoredPosition 의 백터값을 0, 150으로 세팅
         rectTrans.anchoredPosition = new Vector2(spawnX, startY);
 
-        // 스케일 변경
+        // y의 값을 startY~endY까지 랜덤으로 세팅
+        int y = (int)Random.Range(startY, endY);
 
+        //rectTrans.anchoredPosition 의 축을 spawnX , y 로 세팅
+        rectTrans.anchoredPosition = new Vector2(spawnX, y);
+
+        // 스케일 변경
         // scale 을 scaleSX ~ scaleEX 사이의 값중 랜덤으로
         float scale = Random.Range(scaleSX, scaleEX);
         // rectTrans의 localScale 을 scale scale 으로 변경한다.
@@ -51,14 +55,6 @@ public class BackGround : MonoBehaviour
             if (isRemove)
             {
                 Destroy(gameObject);
-            }
-            else
-            {
-                // y의 값을 startY~endY까지 랜덤으로 세팅
-                int y = (int)Random.Range(startY, endY);
-
-                //rectTrans.anchoredPosition 의 축을 spawnX , y 로 세팅
-                rectTrans.anchoredPosition = new Vector2(spawnX, y);
             }
         }
         // 위치를 왼쪽을 시간마다 이동하되 일정한 스피드를 중첩

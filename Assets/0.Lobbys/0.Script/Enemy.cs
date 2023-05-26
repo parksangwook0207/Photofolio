@@ -1,35 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float startY = 200;
-    [SerializeField] private float removeX = -110;
+    [SerializeField] private float startY = 150;
+    [SerializeField] private float removeX = -100;
+    [SerializeField] private List<Sprite> moveSprite;
+
+    private RectTransform rect;
+    private SpriteAnimation sa;
 
     public int speed = 10;
     public bool isRemove = false;
 
-   
-
-    private RectTransform rect;
-
     private void Start()
     {
         rect = GetComponent<RectTransform>();
+        sa = GetComponent<SpriteAnimation>();
+
+        sa.SetSprite(moveSprite, 0.1f);
     }
     
     void Update()
     {
-        if (rect.anchoredPosition.x > removeX)
+        if (rect.anchoredPosition.x < removeX)
         {
-            if (isRemove)
-            {
-                Destroy(gameObject);
-
-            }
-            transform.Translate(Vector3.left * Time.deltaTime * speed);
+            Destroy(gameObject);
         }
 
+        transform.Translate(Vector3.left * Time.deltaTime * speed);
     }
 }
