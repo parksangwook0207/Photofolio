@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
-        rigid.freezeRotation = true;
+        //rigid.freezeRotation = true;
         sa = GetComponent<SpriteAnimation>();
         sa.SetSprite(moveSprite, 0.1f);
     }
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         //AddForce : AddForce(¹æÇâ * Èû, ÈûÀÇ Á¾·ù)
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             rigid.AddForce(Vector2.up * jumppower, ForceMode2D.Impulse);
         }

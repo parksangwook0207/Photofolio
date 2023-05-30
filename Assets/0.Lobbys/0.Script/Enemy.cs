@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
 
         sa.SetSprite(moveSprite, 0.1f);
     }
-    
+
     void Update()
     {
         if (rect.anchoredPosition.x < removeX)
@@ -31,5 +31,13 @@ public class Enemy : MonoBehaviour
         }
 
         transform.Translate(Vector3.left * Time.deltaTime * speed);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Player")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

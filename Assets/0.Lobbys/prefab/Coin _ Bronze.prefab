@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2457537684227367956
+--- !u!1 &3781769563916140923
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 963473934942393690}
-  - component: {fileID: 2239770492308583959}
-  - component: {fileID: 2757261369914158860}
-  - component: {fileID: 8618830447731255124}
+  - component: {fileID: 8823973759875928188}
+  - component: {fileID: 8110262225319638837}
+  - component: {fileID: 5565947369059403855}
+  - component: {fileID: -137598947106704508}
+  - component: {fileID: 2901099835021366261}
   m_Layer: 5
   m_Name: Coin _ Bronze
   m_TagString: Untagged
@@ -19,13 +20,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &963473934942393690
+--- !u!224 &8823973759875928188
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2457537684227367956}
+  m_GameObject: {fileID: 3781769563916140923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -36,24 +37,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1970, y: 180}
+  m_AnchoredPosition: {x: 1960, y: 180}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2239770492308583959
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!222 &8110262225319638837
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2457537684227367956}
+  m_GameObject: {fileID: 3781769563916140923}
   m_CullTransparentMesh: 1
---- !u!114 &2757261369914158860
+--- !u!114 &5565947369059403855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2457537684227367956}
+  m_GameObject: {fileID: 3781769563916140923}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -77,13 +78,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8618830447731255124
+--- !u!114 &-137598947106704508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2457537684227367956}
+  m_GameObject: {fileID: 3781769563916140923}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d4f6c99f0deda6409c6f11c96204e99, type: 3}
@@ -91,5 +92,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startY: 180
   removeX: -60
+  moveCoins:
+  - {fileID: -2322180950842035098, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
+  - {fileID: -4893972260818282012, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
+  - {fileID: -6323751108524238166, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
+  - {fileID: 2722280177590742205, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
   speed: 80
   isRemove: 0
+--- !u!114 &2901099835021366261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3781769563916140923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7cf7245eb41e14689924023a7f4f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCanvas: 1
