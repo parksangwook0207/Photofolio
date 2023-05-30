@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     public int speed = 10;
     public bool isRemove = false;
-
+    bool player = true;
     private void Start()
     {
         rect = GetComponent<RectTransform>();
@@ -33,11 +33,5 @@ public class Enemy : MonoBehaviour
         transform.Translate(Vector3.left * Time.deltaTime * speed);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.name == "Player")
-        {
-            Destroy(other.gameObject);
-        }
-    }
+    
 }

@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
         sa = GetComponent<SpriteAnimation>();
         sa.SetSprite(moveSprite, 0.1f);
     }
-    
+
 
     // Update is called once per frame
     void Update()
@@ -28,6 +28,14 @@ public class Player : MonoBehaviour
             rigid.AddForce(Vector2.up * jumppower, ForceMode2D.Impulse);
         }
     }
+    private void OnTriggerEnter2D(Collider2D player)
+    {
+        if (player.gameObject.tag.Equals("Enemy"))
+        {
+            Destroy(this.gameObject);
+            Debug.Log(this);
+        }
+    }
 
-    
+
 }
