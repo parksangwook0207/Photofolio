@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     public int speed = 10;
     public bool isRemove = false;
-    bool player = true;
+    
     private void Start()
     {
         rect = GetComponent<RectTransform>();
