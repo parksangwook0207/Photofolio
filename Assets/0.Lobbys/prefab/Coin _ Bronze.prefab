@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 8823973759875928188}
   - component: {fileID: 8110262225319638837}
   - component: {fileID: 5565947369059403855}
-  - component: {fileID: -137598947106704508}
+  - component: {fileID: 2318962127570234486}
   - component: {fileID: 2901099835021366261}
   - component: {fileID: -4439035621969118245}
-  - component: {fileID: 4071773064378183276}
+  - component: {fileID: 3157675944699855554}
   m_Layer: 5
   m_Name: Coin _ Bronze
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-137598947106704508
+--- !u!114 &2318962127570234486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,12 +89,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3781769563916140923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d4f6c99f0deda6409c6f11c96204e99, type: 3}
+  m_Script: {fileID: 11500000, guid: 278c69a930944f34696266f7fc084fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startY: 180
-  removeX: -60
-  moveCoins:
+  startY: 150
+  removeX: -100
+  moveSprite:
   - {fileID: -2322180950842035098, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
   - {fileID: -4893972260818282012, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
   - {fileID: -6323751108524238166, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
@@ -135,8 +135,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &4071773064378183276
-BoxCollider2D:
+--- !u!58 &3157675944699855554
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -149,15 +149,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 50, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 50, y: 50}
-  m_EdgeRadius: 0
+  m_Radius: 25

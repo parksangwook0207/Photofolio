@@ -30,10 +30,9 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D player)
     {
-        if (player.gameObject.tag.Equals("Enemy"))
+        if (player.gameObject.tag == "Enemy")
         {
-            Destroy(this.gameObject);
-            Debug.Log(this);
+            player.gameObject.SetActive(false);
         }
     }
 
