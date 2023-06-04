@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     public int speed = 10;
     public bool isRemove = false;
-    
+
     private void Start()
     {
         rect = GetComponent<RectTransform>();
@@ -33,5 +33,5 @@ public class Enemy : MonoBehaviour
         transform.Translate(Vector3.left * Time.deltaTime * speed);
     }
 
-    
+   
 }
