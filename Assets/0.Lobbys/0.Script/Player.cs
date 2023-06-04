@@ -28,11 +28,11 @@ public class Player : MonoBehaviour
             rigid.AddForce(Vector2.up * jumppower, ForceMode2D.Impulse);
         }
     }
-    private void OnTriggerEnter2D(Collider2D player)
+    public void OnCollisionEnter2D(Collision2D coll)
     {
-        if (player.gameObject.tag == "Enemy")
+        if (coll.gameObject.tag.Equals("Enemy"))
         {
-            player.gameObject.SetActive(false);
+            coll.gameObject.SetActive(false);
         }
     }
 
