@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private List<Sprite> moveSprite;
+    [SerializeField] private GameObject gameoverpal;
 
     private SpriteAnimation sa;
     private Rigidbody2D rigid;
@@ -18,7 +19,6 @@ public class Player : MonoBehaviour
         sa.SetSprite(moveSprite, 0.1f);
     }
 
-
     // Update is called once per frame
     void Update()
     {
@@ -31,10 +31,10 @@ public class Player : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D coll)
     {
-       
         if (coll.gameObject.CompareTag("Enemy"))
         {
             this.gameObject.SetActive(false);
+            Time.timeScale = 0;
         }
     }
 
