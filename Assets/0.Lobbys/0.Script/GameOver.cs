@@ -26,10 +26,13 @@ public class GameOver : MonoBehaviour
 
     public void OnRetrun()
     {
-
+        gameoverpanel.SetActive(false);
+        Time.timeScale = 1;
+        
     }
     public void OnGameover()
     {
         SceneManager.LoadScene("Lobby Scene");
+        Time.timeScale = 1;
     }
 }

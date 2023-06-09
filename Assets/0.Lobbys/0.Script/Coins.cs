@@ -13,12 +13,13 @@ public class Coins : MonoBehaviour
 
     public int speed = 10;
     public bool isRemove = false;
+
+  
     // Start is called before the first frame update
     void Start()
     {
         rect = GetComponent<RectTransform>();
         sa = GetComponent<SpriteAnimation>();
-
         sa.SetSprite(moveSprite, 0.1f);
     }
 
@@ -31,5 +32,13 @@ public class Coins : MonoBehaviour
         }
 
         transform.Translate(Vector3.left * Time.deltaTime * speed);
+    }
+
+    public void OnCollisionEnter2D(Collision2D player)
+    {
+        if (player.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
