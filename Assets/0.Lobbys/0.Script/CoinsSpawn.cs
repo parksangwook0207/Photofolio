@@ -10,8 +10,6 @@ public class CoinsSpawn : MonoBehaviour
     float spawnCnt = 0f;
     float nextspawnCnt = 0f;
 
-    
-
     // Update is called once per frame
     void Update()
     {

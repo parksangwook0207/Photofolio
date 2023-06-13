@@ -9,17 +9,14 @@ public class Player : MonoBehaviour
     private SpriteAnimation sa;
     private Rigidbody2D rigid;
 
-    bool isjump;
-
+    public bool isjump = false;
     public float jumppower = 10f;
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         //rigid.freezeRotation = true;
         sa = GetComponent<SpriteAnimation>();
-        sa.SetSprite(moveSprite, 0.1f);
-
-        isjump = false;
+        sa.SetSprite(moveSprite, 0.1f);        
     }
 
     // Update is called once per frame
@@ -37,18 +34,7 @@ public class Player : MonoBehaviour
         if (coll.gameObject.CompareTag("Enemy"))
         {
             this.gameObject.SetActive(false);
-            isjump = true;
             Time.timeScale = 0;
-        }
+        }       
     }
-
-    
-
-
-
-
-
-
-
-
 }

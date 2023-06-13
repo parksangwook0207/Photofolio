@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float startY = 150;
+    private float startY = 150;
     [SerializeField] private float removeX = -100;
     [SerializeField] private List<Sprite> moveSprite;
 

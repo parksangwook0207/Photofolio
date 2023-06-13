@@ -9,20 +9,20 @@ public class Coins : MonoBehaviour
     [SerializeField] private float removeX = -100;
     [SerializeField] private List<Sprite> moveSprite;
 
-
     private RectTransform rect;
     private SpriteAnimation sa;
+   
 
     public int speed = 10;
     public bool isRemove = false;
-
 
     // Start is called before the first frame update
     void Start()
     {
         rect = GetComponent<RectTransform>();
         sa = GetComponent<SpriteAnimation>();
-        sa.SetSprite(moveSprite, 0.1f);      
+          
+        sa.SetSprite(moveSprite, 0.1f);
     }
 
     // Update is called once per frame
@@ -40,8 +40,8 @@ public class Coins : MonoBehaviour
     {
         if (player.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);         
+            Score.coin += 3;
+            Destroy(gameObject);
         }
-
     }
 }

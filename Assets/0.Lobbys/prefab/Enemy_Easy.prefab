@@ -92,14 +92,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804cf3df015379e4198e3897d58800d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startY: 150
   removeX: -100
   moveSprite:
   - {fileID: -7911572535675539837, guid: 5d4daff38e3d9174b873918abcf2c1d4, type: 3}
   - {fileID: 5398807837072792716, guid: 5d4daff38e3d9174b873918abcf2c1d4, type: 3}
   - {fileID: -3763824636803078212, guid: 5d4daff38e3d9174b873918abcf2c1d4, type: 3}
   - {fileID: 8273598715916126338, guid: 5d4daff38e3d9174b873918abcf2c1d4, type: 3}
-  speed: 200
+  speed: 300
   isRemove: 0
 --- !u!114 &668013854883800189
 MonoBehaviour:

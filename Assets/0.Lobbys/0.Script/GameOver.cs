@@ -7,6 +7,8 @@ public class GameOver : MonoBehaviour
 {
     public GameObject gameoverpanel;
 
+    private Score score;
+
     [SerializeField] private Player player;
     // Start is called before the first frame update
 
@@ -27,9 +29,11 @@ public class GameOver : MonoBehaviour
 
     public void OnRetrun()
     {
-        gameoverpanel.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
-        
+        score.text.text = "";
+
+
     }
     public void OnGameover()
     {
