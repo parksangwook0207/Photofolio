@@ -31,9 +31,7 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
-        score.text.text = "";
-
-
+        
     }
     public void OnGameover()
     {

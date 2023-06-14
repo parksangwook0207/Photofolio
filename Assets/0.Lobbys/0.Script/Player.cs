@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
     [SerializeField] private List<Sprite> moveSprite;
   
     private SpriteAnimation sa;
     private Rigidbody2D rigid;
+
+    private Animation animation;
 
     public bool isjump = false;
     public float jumppower = 10f;
@@ -16,16 +19,18 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         //rigid.freezeRotation = true;
         sa = GetComponent<SpriteAnimation>();
-        sa.SetSprite(moveSprite, 0.1f);        
+        sa.SetSprite(moveSprite, 0.1f);
+        animation = GetComponent<Animation>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //AddForce : AddForce(¹æÇâ * Èû, ÈûÀÇ Á¾·ù)
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && animation.GetBool())
         {
             rigid.AddForce(Vector2.up * jumppower, ForceMode2D.Impulse);
+            
         }
     }
 

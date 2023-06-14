@@ -29,7 +29,7 @@ public class EnemySpawn : MonoBehaviour
             spawnCnt = 0f;
 
             // nextspawnCnt 를 랜덤값으로 5초에서 7초마다 랜덤 세팅후
-            nextspawnCnt = Random.Range(5, 7);
+            nextspawnCnt = Random.Range(3, 5);
             // enemy를 생성
             Instantiate(enemy[Random.Range(0, enemy.Count)], parent);
         }
