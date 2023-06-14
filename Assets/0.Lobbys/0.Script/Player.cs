@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     private SpriteAnimation sa;
     private Rigidbody2D rigid;
 
-    private Animation animation;
+    //private Animation animation;
 
     public bool isjump = false;
     public float jumppower = 10f;
@@ -20,14 +20,14 @@ public class Player : MonoBehaviour
         //rigid.freezeRotation = true;
         sa = GetComponent<SpriteAnimation>();
         sa.SetSprite(moveSprite, 0.1f);
-        animation = GetComponent<Animation>();
+        //animation = GetComponent<Animation>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //AddForce : AddForce(¹æÇâ * Èû, ÈûÀÇ Á¾·ù)
-        if (Input.GetKey(KeyCode.Space) && animation.GetBool())
+        if (Input.GetKey(KeyCode.Space))
         {
             rigid.AddForce(Vector2.up * jumppower, ForceMode2D.Impulse);
             
