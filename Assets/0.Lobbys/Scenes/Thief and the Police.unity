@@ -221,8 +221,8 @@ GameObject:
   - component: {fileID: 80940518}
   - component: {fileID: 80940519}
   m_Layer: 0
-  m_Name: Image-2@
-  m_TagString: Untagged
+  m_Name: Bottom
+  m_TagString: Bottom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -726,8 +726,8 @@ MonoBehaviour:
   - {fileID: 6348790710242686107, guid: 10f3cacccb0c4c547be76836eba20664, type: 3}
   - {fileID: 5513914976837039818, guid: 10f3cacccb0c4c547be76836eba20664, type: 3}
   - {fileID: -434675778434299504, guid: 10f3cacccb0c4c547be76836eba20664, type: 3}
-  anim: {fileID: 0}
-  isjump: 0
+  jumpSprite: []
+  anim: {fileID: 210828566}
   jumppower: 12
 --- !u!50 &210828564
 Rigidbody2D:
@@ -1909,8 +1909,8 @@ GameObject:
   - component: {fileID: 1692096366}
   - component: {fileID: 1692096367}
   m_Layer: 0
-  m_Name: Image-2@
-  m_TagString: Untagged
+  m_Name: Bottom
+  m_TagString: Bottom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
