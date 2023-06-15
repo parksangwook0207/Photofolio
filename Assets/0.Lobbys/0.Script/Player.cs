@@ -6,31 +6,47 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private List<Sprite> moveSprite;
-  
+    [SerializeField] private List<Sprite> jumpSprite;
+
     private SpriteAnimation sa;
     private Rigidbody2D rigid;
 
-    //private Animation animation;
-
-    public bool isjump = false;
+    public Animator anim;
+  
     public float jumppower = 10f;
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
-        //rigid.freezeRotation = true;
+       
         sa = GetComponent<SpriteAnimation>();
         sa.SetSprite(moveSprite, 0.1f);
-        //animation = GetComponent<Animation>();
+        anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         //AddForce : AddForce(¹æÇâ * Èû, ÈûÀÇ Á¾·ù)
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space)) //!anim.GetBool("isWalk"))
         {
-            rigid.AddForce(Vector2.up * jumppower, ForceMode2D.Impulse);
-            
+            rigid.AddForce(Vector3.up * jumppower, ForceMode2D.Impulse);
+            anim.SetBool("isJump", true);
+        }
+
+        if (Mathf.Abs(rigid.velocity.x) < 0.5)
+        {
+            anim.SetBool("isWalk", false);
+        }
+        else
+        {
+            anim.SetBool("isWalk", true);
+        }
+
+        RaycastHit2D raycast = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask(""));
+        if (raycast.collider != null)
+        {
+            Debug.Log(raycast.collider.name);
         }
     }
 
