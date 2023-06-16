@@ -9,12 +9,13 @@ public class Score : MonoBehaviour
     public TMP_Text text;
     public static int coin;
 
+
     void Start()
     {
         text = GetComponent<TMP_Text>();
     }
     void Update()
     {
-        text.text = coin.ToString();
+        text.text = coin.ToString();       
     }
 }

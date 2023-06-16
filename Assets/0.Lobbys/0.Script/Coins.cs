@@ -40,7 +40,7 @@ public class Coins : MonoBehaviour
     {
         if (player.gameObject.CompareTag("Player"))
         {
-            Score.coin += 3;
+            Score.coin += 15;
             Destroy(gameObject);
         }
     }

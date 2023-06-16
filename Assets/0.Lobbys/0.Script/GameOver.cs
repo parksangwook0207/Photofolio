@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public GameObject gameoverpanel;
+    [SerializeField]  private GameObject gameoverpanel;
 
     private Score score;
 
