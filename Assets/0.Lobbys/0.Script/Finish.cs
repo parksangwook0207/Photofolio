@@ -4,19 +4,30 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
-    [SerializeField] private GameObject finishim;
-    [SerializeField] private Transform parent;
+    
+    [SerializeField] private float startY = 150;
+    [SerializeField] private float removeX = -100;
 
-    float finishvaule = 30;
+    public int speed = 10;
+
+    public bool isbool = false;
+
+    private RectTransform rect;
 
     
+
+    private void Start()
+    {
+        rect = GetComponent<RectTransform>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Score.coin == finishvaule)
-        {
-            Instantiate(finishim, parent);
+        if (rect.anchoredPosition.x > removeX)
+        {           
+            Destroy(gameObject);                       
         }
+        transform.Translate(Vector3.left * Time.deltaTime * speed);
     }
 }
