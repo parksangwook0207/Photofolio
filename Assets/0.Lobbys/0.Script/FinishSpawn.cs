@@ -8,6 +8,11 @@ public class FinishSpawn : MonoBehaviour
     [SerializeField] private Transform parent;
 
     float finishvalue = 30;
+    public int speed = 10;
+    private void Start()
+    {
+       
+    }
     // Update is called once per frame
     void Update()
     {
@@ -15,5 +20,6 @@ public class FinishSpawn : MonoBehaviour
         {
             Instantiate(finishim, parent);
         }
+        transform.Translate(Vector3.left * Time.deltaTime * speed);
     }
 }

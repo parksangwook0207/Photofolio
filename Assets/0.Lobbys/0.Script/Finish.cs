@@ -10,7 +10,7 @@ public class Finish : MonoBehaviour
 
     public int speed = 10;
 
-    public bool isbool = false;
+    public bool isremove = false;
 
     private RectTransform rect;
 
@@ -24,8 +24,8 @@ public class Finish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rect.anchoredPosition.x > removeX)
-        {           
+        if (rect.anchoredPosition.x < removeX)
+        {   
             Destroy(gameObject);                       
         }
         transform.Translate(Vector3.left * Time.deltaTime * speed);
