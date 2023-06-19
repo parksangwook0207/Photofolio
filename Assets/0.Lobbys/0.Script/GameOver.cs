@@ -7,16 +7,15 @@ public class GameOver : MonoBehaviour
 {
     [SerializeField]  private GameObject gameoverpanel;
 
-    private Score score;
-
     [SerializeField] private Player player;
+    
     // Start is called before the first frame update
 
     private void Awake()
     {
-        gameoverpanel.SetActive(false);
+        gameoverpanel.SetActive(false);        
     }
-    
+
 
     // Update is called once per frame
     void Update()
