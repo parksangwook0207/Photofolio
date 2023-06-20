@@ -8,10 +8,10 @@ public class GameFinish : MonoBehaviour
     public GameObject finishpanel;
     
 
-    float finishCnt = 30;
+    float finishCnt = 100;
     // Start is called before the first frame update
 
-    private void Awake()
+    private void Start()
     {
         finishpanel.SetActive(false);
     }
@@ -21,15 +21,12 @@ public class GameFinish : MonoBehaviour
     {
         if (Score.coin == finishCnt)
         {
-            finishpanel.SetActive(true);           
+            finishpanel.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
     public void OnReturn()
     {
         SceneManager.LoadScene("Lobby Scene");
-        if (finishpanel.gameObject.activeInHierarchy == true)
-        {
-            finishpanel.SetActive(false);
-        }       
     }
 }

@@ -9,5 +9,6 @@ public class SceneChange : MonoBehaviour
     public void OnSceneChange()
     {
         SceneManager.LoadScene("Thief and the Police");
+        Time.timeScale = 1f;
     }
 }

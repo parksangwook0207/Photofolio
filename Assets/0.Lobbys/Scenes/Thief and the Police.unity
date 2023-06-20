@@ -619,7 +619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 32, y: 150.5}
+  m_AnchoredPosition: {x: 32, y: 150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &210828560
@@ -694,7 +694,7 @@ MonoBehaviour:
   - {fileID: -5761754228987130096, guid: 10f3cacccb0c4c547be76836eba20664, type: 3}
   - {fileID: 5907920678353447086, guid: 10f3cacccb0c4c547be76836eba20664, type: 3}
   - {fileID: -6086044393419928071, guid: 10f3cacccb0c4c547be76836eba20664, type: 3}
-  jumppower: 15
+  jumppower: 12
 --- !u!50 &210828564
 Rigidbody2D:
   serializedVersion: 4
@@ -710,7 +710,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 12
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1755,6 +1755,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameFinish, Assembly-CSharp
         m_MethodName: OnReturn
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1865201652}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -14,18 +14,20 @@ public class Player : MonoBehaviour
 
     //public Animator anim;
   
-    public float jumppower = 500f;
+    public float jumppower = 300f;
 
     bool isJump = false;
     bool isPlayJump = false;
-    void Awake()
+    void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
-       
+
         sa = GetComponent<SpriteAnimation>();
         sa.SetSprite(moveSprite, 0.1f);
         //anim = GetComponent<Animator>();
+
         
+
     }
 
     // Update is called once per frame
@@ -41,16 +43,13 @@ public class Player : MonoBehaviour
         }
         */
 
-        RaycastHit2D raycast = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask(""));
-        if (raycast.collider != null)
-        {
-            Debug.Log(raycast.collider.name);
-        }
+       
 
         //AddForce : AddForce(방향 * 힘, 힘의 종류)
         if (Input.GetKeyDown(KeyCode.Space) && isJump) //!anim.GetBool("isWalk"))
         {
             Debug.Log("Jump");
+            
             //rigid.AddForce(transform.up * jumppower, ForceMode2D.Impulse);
             isPlayJump = true;
             //sa.SetSprite(jumpSprite, 0.1f);
@@ -59,9 +58,9 @@ public class Player : MonoBehaviour
         if (isPlayJump)
         {
             Vector2 vec2 = transform.localPosition;
-            vec2.y += 170;
+            vec2.y += 150;
             //시간이 지남에 따라 GameObject를 현재 위치에서 대상으로 이동
-            transform.localPosition = Vector2.Lerp(transform.localPosition, vec2, Time.deltaTime * 1.5f);           
+            transform.localPosition = Vector2.Lerp(transform.localPosition, vec2, Time.deltaTime * 1.7f);          
         }
     }
 
