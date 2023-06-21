@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
         //AddForce : AddForce(방향 * 힘, 힘의 종류)
         if (Input.GetKeyDown(KeyCode.Space) && isJump) //!anim.GetBool("isWalk"))
         {
-            Debug.Log("Jump");
+            //Debug.Log("Jump");
             
             //rigid.AddForce(transform.up * jumppower, ForceMode2D.Impulse);
             isPlayJump = true;
@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
             Vector2 vec2 = transform.localPosition;
             vec2.y += 150;
             //시간이 지남에 따라 GameObject를 현재 위치에서 대상으로 이동
-            transform.localPosition = Vector2.Lerp(transform.localPosition, vec2, Time.deltaTime * 1.7f);          
+            transform.localPosition = Vector2.Lerp(transform.localPosition, vec2, Time.deltaTime * 2f);          
         }
     }
 
@@ -75,6 +75,7 @@ public class Player : MonoBehaviour
         {
             isJump = true;
             isPlayJump = false;
+            //Debug.Log(isPlayJump);
         }
     }
 
@@ -83,6 +84,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Bottom"))
         {
             isJump = false;
+            Debug.Log(isJump);
         }
     }
 }
