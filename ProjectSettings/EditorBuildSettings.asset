@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/0.Lobbys/Scenes/Lobby Scene.unity
     guid: 9dea0ea562a00af4fac1ad014b1e6b88
   - enabled: 1
-    path: Assets/0.Lobbys/Scenes/Thief and the Police.unity
+    path: Assets/0.Lobbys/Scenes/GAME.unity
     guid: 5e4dd62338d52434fbe1f8dd8ce65f00
   m_configObjects: {}
