@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     private SpriteAnimation sa;
 
     public int speed = 10;
-    public bool isRemove = false;
+    
 
     private void Start()
     {

@@ -5,23 +5,24 @@ using TMPro;
 
 public class Coins : MonoBehaviour
 {
-    [SerializeField] private float startY = 150;
+    [SerializeField] private float startY = 180;
     [SerializeField] private float removeX = -100;
     [SerializeField] private List<Sprite> moveSprite;
 
     private RectTransform rect;
     private SpriteAnimation sa;
-   
 
+    private float spawnX = 0;
     public int speed = 10;
-    public bool isRemove = false;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         rect = GetComponent<RectTransform>();
         sa = GetComponent<SpriteAnimation>();
-          
+        spawnX = Screen.width;
+        rect.anchoredPosition = new Vector2(spawnX, startY);
         sa.SetSprite(moveSprite, 0.1f);
     }
 
@@ -36,13 +37,13 @@ public class Coins : MonoBehaviour
         transform.Translate(Vector3.left * Time.deltaTime * speed);
     }
 
-    public void OnCollisionEnter2D(Collision2D player)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (player.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Score.coin += 1;
             Destroy(gameObject);
         }
-        
     }
+    
 }
